@@ -16,7 +16,9 @@ then
 sudo groupadd -f $GROUP
 #adds the user, then adds the user to the group.
 sudo useradd -G $GROUP $NEWUSER
+echo "created user $NEWUSER and added to group: $GROUP"
+
 else
-	exit 0
+	echo "Didn't provide a valid value."
 fi
 
