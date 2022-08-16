@@ -17,5 +17,7 @@ ax = fig.add_axes([0, 0, 1, 1])  # span the whole figure
 ax.set_axis_off()
 ax.imshow(code.reshape(1, -1), cmap='binary', aspect='auto',
           interpolation='nearest')
-plt.show()
+
 plt.savefig("/home/student/mycode/graphing/barcode.png")
+plt.title("Barcode")
+plt.savefig("/home/student/static/barcode.png")
