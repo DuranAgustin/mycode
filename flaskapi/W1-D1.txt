@@ -1,0 +1,19 @@
+/etc/default/useradd
+To start with, there is a configuration file, /etc/default/useradd which gets some of the default user configurations when you create a user.
+
+/etc/login.defs
+There's also /etc/login.defs. We will see that there are some conflicting settings between the useradd and login.defs files. Note: If there is a conflicting setting between these files, then login.defs will override the useradd setting when creating a user.
+
+/etc/skel/
+Something else that is considered while creating a user is the directory, /etc/skel/. Notice the trailing slash. This is not a configuration file, but a skeleton directory, and the contents of this skeleton directory are copied to the home directory when the user is created.
+
+/etc/passwd
+The main configuration file for users is /etc/passwd. This is where we find all the essential user properties after a user has been added.
+
+/etc/shadow
+The /etc/shadow configuration file is used for password management. The encrypted password is stored here as well as all properties that are related to the user passwords.
+
+/etc/group
+Finally, there is /etc/group. Remember that users are a member of groups, and all groups are administered through the /etc/group file. This is a key piece of user management.
+
+Now, let's take a deeper look into these configuration files.
